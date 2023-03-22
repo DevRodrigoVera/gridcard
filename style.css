@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root {
+  --body: #314A60;
+  --white: #fff;
+  --title: 'Poppins', sans-serif;
+  --title-color: #0077ff;
+  --paragraph: 'Open Sans', sans-serif;
+  --paragraph-color: #333;
+  --button-bg: #125DB3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {background-color: var(--body);}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 1200px;
+  gap: 20px;
+  margin: 20px;
+}
+
+.card {
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 350px;
+  background-color: var(--white);
+}
+
+.card__image {height: 250px;}
+
+.card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card__body {margin: 20px 30px 30px;}
+
+.card__title {
+  text-align: center;
+  color: var(--title);
+  font-family: var(--title);
+  color: var(--title-color);
+}
+
+.card__paragraph {
+  text-align: center;
+  line-height: 24px;
+  margin: 30px auto;
+  font-family: var(--paragraph);
+  font-size: 15px;
+}
+
+.card__btn {
+  display: block;
+  margin: auto;
+  background: var(--button-bg);
+  color: var(--white);
+  padding: 10px 20px;
+  border: 1px solid transparent;
+  font-weight: bold;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+}
+
+.card__btn:hover {
+  color: var(--button-bg);
+  border: 1px solid var(--button-bg);
+  background: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
